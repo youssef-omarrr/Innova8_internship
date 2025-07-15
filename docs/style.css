@@ -1,0 +1,94 @@
+/* ====== GLOBAL ====== */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    font-family: "Fira Code", monospace;
+}
+
+:root{
+    --opp: linear-gradient(135deg, #4682A9, #91C8E4);
+    --gradient: linear-gradient(135deg, #91C8E4, #4682A9);
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: var(--gradient);
+}
+
+#title{
+    width: 100%;
+    font-size: larger;
+    text-align: center;
+    margin-bottom: -2.5rem;
+    margin-right: 25rem;
+}
+
+/* ====== TEXT ====== */
+label.bolder{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* ====== CONTAINER ====== */
+#container{
+    background-color: #fefcf4;
+    border: 0.15rem solid #000000;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.entry{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+#names, #account{
+    display:flex;
+}
+
+#details{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.1rem;
+    margin: 0.7rem;
+}
+select{
+    margin-right: 0.7rem;
+}
+
+/* ====== BUTTON ====== */
+#button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#submit{
+    background: var(--gradient);
+    color: #fefcf4;
+
+    font-weight: bolder;
+    font-size: large;
+    letter-spacing: 1px;
+
+    width: 80%;
+    height: 2rem;
+
+    border-radius: 0.5rem;
+
+    transition: 
+        background 0.5s ease-in-out,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+#submit:hover{
+    background: var(--opp);
+    color: #000000;
+
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
