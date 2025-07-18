@@ -8,7 +8,7 @@ document.getElementById("container").addEventListener("submit", async function (
     const formData = new FormData(this); 
 
     try {
-        const response = await fetch("register.php", {
+        const response = await fetch("../src/views/register.php", {
             method: "POST",   // Use POST to send data securely
             body: formData    // Send the collected form data to the PHP backend
         });
@@ -35,5 +35,5 @@ document.getElementById("container").addEventListener("submit", async function (
 });
 
 document.getElementById("view_btn").addEventListener("click", ()=>{
-    window.location.href = "view.php"; // Opens in the same tab
+    window.location.href = "../src/views/view.php"; // Opens in the same tab
     })

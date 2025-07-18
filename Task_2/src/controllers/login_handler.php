@@ -1,7 +1,7 @@
 <?php
 session_start(); // Start session to store login status
 
-include_once "test_db.php";
+include_once "../utils/test_db.php";
 $conn = init_db_connection($echo = 0);
 // =============================================== //
 
@@ -60,7 +60,7 @@ if ($row = $result->fetch_assoc()) {
 
         // Redirect based on action
         if ($action === "edit") {
-            header("Location: ../edit.php?id=" . urlencode($userId));
+            header("Location: ../views/edit.php?id=" . urlencode($userId));
             exit();
         } elseif ($action === "delete") {
             // Perform deletion from database
@@ -69,7 +69,7 @@ if ($row = $result->fetch_assoc()) {
             $delStmt->execute();
 
             // Redirect back to the view page
-            header("Location: ../view.php?message=deleted");
+            header("Location: ../views/view.php?message=deleted");
             exit();
         } else {
             echo "Invalid action.";

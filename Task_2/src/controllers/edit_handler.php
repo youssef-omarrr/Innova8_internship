@@ -1,6 +1,6 @@
 <?php
 // Include database connection setup
-include_once "test_db.php";
+include_once "../utils/test_db.php";
 $conn = init_db_connection($cho = 0);
 
 // Collect and sanitize user inputs
@@ -27,7 +27,7 @@ if ($password1 && $password1 === $password2) {
 
 // Execute and handle the result
 if ($stmt->execute()) {
-    header("Location: ../view.php?message=updated");
+    header("Location: ../views/view.php?message=updated");
 } else {
     echo "Update failed: " . $stmt->error;
 }

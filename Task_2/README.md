@@ -8,6 +8,37 @@
 
 ###  File Structure Breakdown
 
+```markdown
+project-root/
+├── public/                  # Web server root (publicly accessible)
+│   ├── assets/
+│   │   ├── js/              # Client-side JavaScript
+│   │   │   ├── register.js
+│   │   │   └── view_page.js
+│   │   └── css/             # Stylesheets
+│   │       ├── registration_page.css
+│   │       └── view_page.css
+│   └── registration.html    # Static HTML pages
+│   
+│
+├── src/                     # Backend application code (NOT publicly accessible)
+│   ├── controllers/         # Request handlers
+│   │   ├── edit_handler.php
+│   │   └── login_handler.php
+│   ├── models/              # User class
+│   │   └── User.php
+│   ├── utils/               # Utilities/helpers
+│   │   ├── db.php           # Class to handle Database connection
+│   │   └── test_db.php       # Test DB connection and return it  
+│   └── views/               # PHP view templates
+│       ├── edit.php
+│       ├── register.php
+│       └── view.php
+│
+│
+└── README.md                # Documentation
+```
+
 #### **Registration Module**
 
 - `registeration.html`  

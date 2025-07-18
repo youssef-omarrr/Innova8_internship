@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/registration_page.css">
-    <link rel="stylesheet" href="styles/view_page.css">
-    <script src="scripts/view_page.js" defer></script>
+    <link rel="stylesheet" href="../../public/assets/css/registration_page.css">
+    <link rel="stylesheet" href="../../public/assets/css/view_page.css">
+    <script src="../../public/assets/js/view_page.js" defer></script>
     <title>View Data</title>
 </head>
 
@@ -18,7 +18,7 @@
     <div id="login">
         <button id="close-login" type="button">×</button> <!-- X button -->
         <h2>Log in</h2>
-        <form id="login-form" method="POST" action="utils/login_handler.php">
+        <form id="login-form" method="POST" action="../controllers/login_handler.php">
             <div class="entry">
                 <label class="bolder">Email address:</label>
                 <input type="email" placeholder="Email address" name="email" required />
@@ -37,7 +37,7 @@
     </div>
     <!-- =========================================================== -->
     <?php
-    include_once "utils/test_db.php";
+    include_once "../utils/test_db.php";
 
     // initialize the db
     $conn = init_db_connection($echo = 0);

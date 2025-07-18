@@ -1,6 +1,6 @@
 <?php
-include "utils/user.php";
-include_once "utils/test_db.php";
+include "../models/user.php";
+include_once "../utils/test_db.php";
 
 try{
 // initialize the db

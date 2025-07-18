@@ -1,6 +1,6 @@
 <?php
 // Include DB connection
-include_once "utils/test_db.php";
+include_once "../utils/test_db.php";
 $conn = init_db_connection($echo = 0);
 
 // Get user ID from URL
@@ -27,7 +27,7 @@ $hobbies = explode(',', $user['hobbies']);
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/registration_page.css" />
+    <link rel="stylesheet" href="../../public/assets/css/registration_page.css" />
     <title>Edit User</title>
 </head>
 
@@ -38,7 +38,7 @@ $hobbies = explode(',', $user['hobbies']);
     </div>
 
     <!-- Edit Form -->
-    <form id="container" method="POST" action="utils/edit_handler.php">
+    <form id="container" method="POST" action="../controllers/edit_handler.php">
         <!-- Hidden user ID -->
         <input type="hidden" name="user_id" value="<?= htmlspecialchars($user['id']) ?>">
 
