@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Get reference to the hidden login div and the close button
     const loginBox = document.getElementById("login");
     const closeBtn = document.getElementById("close-login");
+    const overlay = document.getElementById("overlay");
 
     // Get hidden input fields inside the login div that will store action type (edit/delete) and the user ID
     const actionInput = document.getElementById("login-action");
@@ -31,10 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Make the hidden login box visible by adding a class (e.g., class "show" sets opacity to 1)
             loginBox.classList.add("show");
+            overlay.style.display = "block"; // <- SHOW OVERLAY
         });
     });
 
     closeBtn.addEventListener("click", ()=>{
         loginBox.classList.remove("show");
+        overlay.style.display = "none"; // <- HIDE OVERLAY
     });
 });

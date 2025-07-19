@@ -43,13 +43,26 @@ body {
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    z-index: 100; /* To make sure it's on top of every other div */
+    z-index: 1000; /* To make sure it's on top of every other div */
 }
 
 #login.show {
     opacity: 1;
     pointer-events: auto;
 }
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.7); /* Gray with 40% opacity */
+    z-index: 999; /* Behind the login box but above everything else */
+    display: none; /* Hidden by default */
+}
+
 
 #close-login {
     position: absolute;

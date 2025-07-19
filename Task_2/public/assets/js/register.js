@@ -8,7 +8,7 @@ document.getElementById("container").addEventListener("submit", async function (
     const formData = new FormData(this); 
 
     try {
-        const response = await fetch("../src/views/register.php", {
+        const response = await fetch("../src/controllers/register_handler.php", {
             method: "POST",   // Use POST to send data securely
             body: formData    // Send the collected form data to the PHP backend
         });

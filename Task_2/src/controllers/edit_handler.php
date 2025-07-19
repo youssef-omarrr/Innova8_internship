@@ -1,6 +1,6 @@
 <?php
 // Include database connection setup
-include_once "../utils/test_db.php";
+include_once "../utils/connect_db.php";
 $conn = init_db_connection($cho = 0);
 
 // Collect and sanitize user inputs

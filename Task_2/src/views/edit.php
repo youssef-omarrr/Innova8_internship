@@ -1,6 +1,6 @@
 <?php
 // Include DB connection
-include_once "../utils/test_db.php";
+include_once "../utils/connect_db.php";
 $conn = init_db_connection($echo = 0);
 
 // Get user ID from URL

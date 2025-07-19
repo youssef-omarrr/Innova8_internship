@@ -11,10 +11,13 @@
 </head>
 
 <body>
+    <!-- Overlay to add a dark background when the login window pops up -->
+    <div id="overlay"></div>
+    
     <div id="title">
         <h1>View data page</h1>
     </div>
-
+    
     <div id="login">
         <button id="close-login" type="button">×</button> <!-- X button -->
         <h2>Log in</h2>
@@ -37,7 +40,7 @@
     </div>
     <!-- =========================================================== -->
     <?php
-    include_once "../utils/test_db.php";
+    include_once "../utils/connect_db.php";
 
     // initialize the db
     $conn = init_db_connection($echo = 0);

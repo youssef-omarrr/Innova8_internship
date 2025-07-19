@@ -1,7 +1,7 @@
 <?php
 session_start(); // Start session to store login status
 
-include_once "../utils/test_db.php";
+include_once "../utils/connect_db.php";
 $conn = init_db_connection($echo = 0);
 // =============================================== //
 
@@ -42,8 +42,6 @@ if (!$stmt->execute()) {
 }
 
 $result = $stmt->get_result();
-
-
 
 if ($row = $result->fetch_assoc()) {
 
