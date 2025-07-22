@@ -22,7 +22,7 @@
     // Assert that no one access the page unless logged in
     if (!isset($_SESSION['user_id'])) {
         // Not logged in
-        header("Location: ../login_page/login.php");
+        header("Location: ../login_page/login_page.php");
         exit;
     }
 
@@ -77,6 +77,9 @@
         }
 
         echo "</table>";
+
+        echo "<button class='btn' id='logout' type='button'> Log Out </button>";
+
     } else {
         echo "<h1 style='text-align:center'>No records found.</h1>";
     }

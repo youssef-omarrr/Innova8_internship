@@ -1,6 +1,9 @@
 <?php
-// If data was sent via GET, from the edi/ delete buttons in the edit page
+// Start session if not set
+if (session_start() === PHP_SESSION_NONE)
+    session_start();
 
+// If data was sent via GET, from the edit/ delete buttons in the edit page
 if (isset($_GET['id']) && isset($_GET['action'])) {
     // Get the id from the url
     $id = (int)$_GET['id'];
@@ -8,6 +11,16 @@ if (isset($_GET['id']) && isset($_GET['action'])) {
     // Get the action from the url
     $action = $_GET['action'];
 }
+
+if (isset($_GET['logout']) && $_GET['logout'] === 'true') {
+        echo "<script>alert('Session ended. Please log in again.');</script>";
+        // Unset all session variables
+        session_unset();
+        // Destroies the session
+        session_destroy();
+    } 
+
+
 ?>
 
 

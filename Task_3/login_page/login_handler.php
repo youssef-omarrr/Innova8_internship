@@ -69,7 +69,7 @@ if (Login::Authenticate($email, $password, $conn)) {
 
         // Edit
         if ($action === 'edit') {
-            header("Location: ../edit_page/edit.php?id=$user_id");
+            header("Location: ../edit_page/edit.php");
             exit;
         }
         // Delete

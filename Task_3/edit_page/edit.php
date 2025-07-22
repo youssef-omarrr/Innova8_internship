@@ -3,15 +3,6 @@
 include_once "../db.php";
 $conn = Database::getConnection();
 
-// Get user ID from URL
-if (isset($_GET['id'])) {
-    // Get the id from the url
-    $id = (int)$_GET['id'];
-} else {
-    header("Location: ../login_page/login.php");
-    exit;
-}
-
 // Fetch user data from DB
 $sql = "SELECT * FROM users WHERE id = :id";
 $stmt = $conn->prepare($sql);
@@ -26,7 +17,7 @@ session_start();
 // Assert that no one access the page unless logged in
 if (!isset($_SESSION['user_id'])) {
     // Not logged in
-    header("Location: ../login_page/login.php");
+    header("Location: ../login_page/login_page.php");
     exit;
 }
 echo "<script>alert('Logged in as " . $_SESSION['first_name'] . " " . $_SESSION['last_name'] . "');</script>";
@@ -52,7 +43,7 @@ echo "<script>alert('Logged in as " . $_SESSION['first_name'] . " " . $_SESSION[
     <!-- =========================================================== -->
     <form id="container" method="POST" action="edit_handler.php">
         <!-- Hidden user ID -->
-        <input type="hidden" name="user_id" value="<?= htmlspecialchars($id) ?>">
+        <input type="hidden" name="user_id" value="<?= htmlspecialchars($_SESSION['user_id']) ?>">
 
         <!-- Name Fields -->
         <div id="names">

@@ -130,3 +130,8 @@ a.btn:hover{
 #view_btn{
     flex: 1;
 }
+
+#logout{
+    width: 50%;
+    height: 2.5rem;
+}

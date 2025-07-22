@@ -17,8 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("User ID:", user_id);
             console.log("Action:", action);
 
-            // Redirect to the login page with user_id and action in the URL
-            window.location.href = `../login_page/login_page.php?id=${user_id}&action=${action}`;
+            // Dont send user_id on login out
+            if (action === 'edit' || action === 'delete')
+                // Redirect to the login page with user_id and action in the URL
+                window.location.href = `../login_page/login_page.php?id=${user_id}&action=${action}`;
+            else if (action === 'logout')
+                // Redirect to the login page with action only in the URL
+                window.location.href = `../login_page/login_page.php?logout=true`;
 
         });
     });
